@@ -6,6 +6,10 @@ from matplotlib.patches import Rectangle
 from PIL import Image
 from io import BytesIO
 import json
+import sys
+
+image_dir = sys.argv[1]
+filename = sys.argv[2]
 
 # Replace <Subscription Key> with your valid subscription key.
 subscription_key = "f91f981d75ce430891ef8914d36e6225"
@@ -25,7 +29,8 @@ ocr_url = vision_base_url + "ocr"
 # Set image_url to the URL of an image that you want to analyze.
 # image_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/" + \
 #     "Atomist_quote_from_Democritus.png/338px-Atomist_quote_from_Democritus.png"
-image_url = "https://github.com/sounding-spirit/test-bed-ocr/blob/master/osh-1911/00000483.jpg?raw=true"
+image_url = "https://github.com/sounding-spirit/test-bed-ocr/blob/master/" + image_dir + "/" + filename + "?raw=true"
+#image_url = "https://github.com/sounding-spirit/test-bed-ocr/blob/master/osh-1911/00000483.jpg?raw=true"
 
 
 headers = {'Ocp-Apim-Subscription-Key': subscription_key}
