@@ -35,10 +35,7 @@ for file in dirlist:
                                 y = top_left.y
                                 w = abs(bottom_right.x - top_left.x)
                                 h = abs(bottom_right.y - top_left.y)
-                                if content == '' or content == '"':
-                                    pass
-                                else:
-                                    outfile.write('\t'.join([content, str(x), str(y), str(w), str(h), '\n']))
+                                outfile.write('\t'.join([content, str(x), str(y), str(w), str(h), '\n']))
 
 
 '''
